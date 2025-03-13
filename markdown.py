@@ -6,13 +6,14 @@ data = json.load(open('./data/data.json', 'r', encoding='utf-8'))
 content = f"""
 # China GitHub Ranking
 
-更新时间: {now}
+> [!NOTE]
+> 更新时间: {now}
 
-|  Ranking   | Username  |
-|  ----  | ----  |
+|  `#`   | 用户名  | 头像  |
+|  :----:  | :----:  | :----:  |
 """
 for i, item in enumerate(data):
-    content += f"| {i+1} | [{item['username']}]({item['url']}) |"
+    content += f"| {i+1} | [{item['username']}]({item['url']}) | ![{item['username']}](https://wsrv.nl/?url={item['avatar']}&w=30&h=30) |"
     if i != len(data) - 1:
         content += "\n"
 
