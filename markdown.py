@@ -8,11 +8,11 @@ content = f"""
 
 更新时间: {now}
 
-|  Ranking   | Avatar  | Username  |
-|  ----  | ----  | ----  |
+|  Ranking   | Username  |
+|  ----  | ----  |
 """
 for i, item in enumerate(data):
-    content += f"| {i+1} | ![{item['avatar']}]({item['avatar']}) | [{item['username']}]({item['url']}) |"
+    content += f"| {i+1} | [{item['username']}]({item['url']}) |"
     if i != len(data) - 1:
         content += "\n"
 
